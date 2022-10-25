@@ -115,3 +115,12 @@
 ### 롤백(Rollback)
 - 커밋 이전에는 변경 사항을 취소할 수 있다
 - 데이터 변경 사항이 취소되어 데이터의 이전 상태로 복구되며 관련된 행에 대한 잠금이 풀리고 다른 사용자들이 데이터 변경을 할 수 있게 된다
+- 
+
+### ORACLE, SQL Server
+- ORACLE에서 DDL 문장의 수행은 내부적으로 트랜잭션을 종료시키므로
+- ORACLE 에서는 DDL 문장 수행 후 자동으로 COMMIT을 수행
+- SQL Server에서는 DDL 문장 수행 후 자동으로 COMMIT 수행하지 않는다
+- SQL Server에서는 CREATE TABLE 문장도 TRANSACTION의 범주에 포함된다.
+
+
